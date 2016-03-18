@@ -12,3 +12,6 @@ mpi_main: mpi_main.cpp matrix.cpp
 
 clean:
 	rm mpi_main oMpMain main
+
+report/HW2.pdf: report
+	(cd report; python2 plotter.py; pdflatex HW2.tex)
