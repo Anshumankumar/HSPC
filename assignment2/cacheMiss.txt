@@ -1,0 +1,29 @@
+==12400== Cachegrind, a cache and branch-prediction profiler
+==12400== Copyright (C) 2002-2015, and GNU GPL'd, by Nicholas Nethercote et al.
+==12400== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==12400== Command: ./main
+==12400== 
+--12400-- warning: L3 cache found, using its data for the LL simulation.
+==12400== 
+==12400== Process terminating with default action of signal 27 (SIGPROF)
+==12400==    at 0x50B454F: write_gmon (gmon.c:354)
+==12400==    by 0x50B4CC9: _mcleanup (gmon.c:422)
+==12400==    by 0x4FE5FE7: __run_exit_handlers (exit.c:82)
+==12400==    by 0x4FE6034: exit (exit.c:104)
+==12400==    by 0x4FCC836: (below main) (libc-start.c:325)
+==12400== 
+==12400== I   refs:      4,176,693,109
+==12400== I1  misses:            2,094
+==12400== LLi misses:            1,894
+==12400== I1  miss rate:          0.00%
+==12400== LLi miss rate:          0.00%
+==12400== 
+==12400== D   refs:      2,020,686,000  (1,884,982,093 rd   + 135,703,907 wr)
+==12400== D1  misses:      157,131,716  (  156,797,236 rd   +     334,480 wr)
+==12400== LLd misses:          154,269  (       39,487 rd   +     114,782 wr)
+==12400== D1  miss rate:           7.8% (          8.3%     +         0.2%  )
+==12400== LLd miss rate:           0.0% (          0.0%     +         0.1%  )
+==12400== 
+==12400== LL refs:         157,133,810  (  156,799,330 rd   +     334,480 wr)
+==12400== LL misses:           156,163  (       41,381 rd   +     114,782 wr)
+==12400== LL miss rate:            0.0% (          0.0%     +         0.1%  )

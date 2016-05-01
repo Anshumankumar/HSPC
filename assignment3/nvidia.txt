@@ -1,0 +1,21 @@
+==9686== NVPROF is profiling process 9686, command: ./matMul
+==9686== Profiling application: ./matMul
+==9686== Profiling result:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 99.50%  2.04847s      1800  1.1380ms  101.58us  1.6545ms  matrixMultiplication(double*, double*, double*, int*)
+  0.26%  5.3633ms      1808  2.9660us     736ns  2.1503ms  [CUDA memcpy HtoD]
+  0.24%  4.9419ms      1800  2.7450us  1.8560us  3.8400us  [CUDA memcpy DtoH]
+
+==9686== API calls:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 95.71%  2.09160s      3608  579.71us  5.9730us  2.2995ms  cudaMemcpy
+  3.38%  73.804ms        16  4.6128ms  9.0570us  72.492ms  cudaMalloc
+  0.73%  15.920ms      1800  8.8440us  7.9000us  33.829us  cudaLaunch
+  0.07%  1.5746ms      7200     218ns     179ns  3.9520us  cudaSetupArgument
+  0.05%  1.0184ms      1800     565ns     347ns  299.50us  cudaConfigureCall
+  0.04%  881.32us        16  55.082us  10.497us  110.55us  cudaFree
+  0.02%  368.89us        83  4.4440us     261ns  150.48us  cuDeviceGetAttribute
+  0.00%  48.410us         1  48.410us  48.410us  48.410us  cuDeviceGetName
+  0.00%  43.185us         1  43.185us  43.185us  43.185us  cuDeviceTotalMem
+  0.00%  2.7210us         2  1.3600us     617ns  2.1040us  cuDeviceGetCount
+  0.00%     947ns         2     473ns     358ns     589ns  cuDeviceGet

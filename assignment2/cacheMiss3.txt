@@ -1,0 +1,31 @@
+==12277== Cachegrind, a cache and branch-prediction profiler
+==12277== Copyright (C) 2002-2015, and GNU GPL'd, by Nicholas Nethercote et al.
+==12277== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==12277== Command: mpirun --n 4 ./mpi_main
+==12277== 
+--12277-- warning: L3 cache found, using its data for the LL simulation.
+==12277== Warning: noted but unhandled ioctl 0x30000001 with no size/direction hints.
+==12277==    This could cause spurious value errors to appear.
+==12277==    See README_MISSING_SYSCALL_OR_IOCTL for guidance on writing a proper wrapper.
+==12277== Warning: noted but unhandled ioctl 0x27 with no size/direction hints.
+==12277==    This could cause spurious value errors to appear.
+==12277==    See README_MISSING_SYSCALL_OR_IOCTL for guidance on writing a proper wrapper.
+==12277== Warning: noted but unhandled ioctl 0x7ff with no size/direction hints.
+==12277==    This could cause spurious value errors to appear.
+==12277==    See README_MISSING_SYSCALL_OR_IOCTL for guidance on writing a proper wrapper.
+==12277== 
+==12277== I   refs:      101,715,644
+==12277== I1  misses:         90,342
+==12277== LLi misses:         12,933
+==12277== I1  miss rate:        0.09%
+==12277== LLi miss rate:        0.01%
+==12277== 
+==12277== D   refs:       31,781,643  (20,879,438 rd   + 10,902,205 wr)
+==12277== D1  misses:        420,242  (   326,607 rd   +     93,635 wr)
+==12277== LLd misses:        125,191  (    67,962 rd   +     57,229 wr)
+==12277== D1  miss rate:         1.3% (       1.6%     +        0.9%  )
+==12277== LLd miss rate:         0.4% (       0.3%     +        0.5%  )
+==12277== 
+==12277== LL refs:           510,584  (   416,949 rd   +     93,635 wr)
+==12277== LL misses:         138,124  (    80,895 rd   +     57,229 wr)
+==12277== LL miss rate:          0.1% (       0.1%     +        0.5%  )
