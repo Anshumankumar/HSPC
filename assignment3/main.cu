@@ -5,7 +5,7 @@
 
 int main()
 {
-    int nArray[] = {100, 200, 500, 1000, 2000, 5000, 10000};
+    int nArray[] = {100, 200, 500, 1000};
     int indexLength = sizeof(nArray)/sizeof(int);
     for (int i=0; i<indexLength; i++)
     {
