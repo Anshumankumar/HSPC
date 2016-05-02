@@ -18,7 +18,7 @@ void graphGenerator(int n, int maxCon, std::vector<int> &a,
     for (int i=0;i<n;i++)
     {
         if((i%100)==0) std::cout << i <<"\n";
-        a.push_back(rand()%1000);
+        a.push_back(-1);//rand()%1000);
         int cEdge = std::min(i+1, maxCon);
         cEdge = 1 + rand()%cEdge;
         if (cEdge>=i) cEdge = i;
